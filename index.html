@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScopeAI — AI-Integrated Intelligence for Media Production</title>
+<meta name="description" content="ScopeAI builds hardware-integrated AI systems for risk analysis, project scope intelligence, and logistics forecasting in global media production.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #1a2332;
+  --accent: #2c6faa;
+  --accent-light: #e8f0fa;
+  --text: #2d3748;
+  --text-light: #64748b;
+  --bg: #ffffff;
+  --bg-alt: #f7f8fa;
+  --border: #e2e8f0;
+  --max-width: 860px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  background: var(--bg);
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 0.9rem 2rem;
+}
+
+nav .nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+nav .logo span { color: var(--accent); }
+
+nav .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+
+nav .nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav .nav-links a:hover { color: var(--accent); }
+
+/* Sections */
+section { padding: 4rem 2rem; }
+section:nth-child(even) { background: var(--bg-alt); }
+
+.container { max-width: var(--max-width); margin: 0 auto; }
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+p { margin-bottom: 1rem; color: var(--text); }
+p.muted { color: var(--text-light); font-size: 0.95rem; }
+
+/* Hero */
+.hero {
+  padding: 5rem 2rem 4rem;
+  background: linear-gradient(168deg, #f0f5fa 0%, #ffffff 100%);
+}
+
+.hero .container { max-width: var(--max-width); margin: 0 auto; }
+
+.hero h1 { margin-bottom: 1.2rem; }
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 1.8rem;
+}
+
+.hero .status-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #c4d9ef;
+}
+
+/* Problem section */
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.problem-card {
+  padding: 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.problem-card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+.problem-card p { font-size: 0.92rem; margin-bottom: 0; color: var(--text-light); }
+
+/* What we build */
+.build-intro {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  max-width: 640px;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.pillar {
+  padding: 1.5rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pillar .pillar-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pillar h3 { font-size: 0.95rem; text-align: center; }
+.pillar p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 0; }
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-card {
+  padding: 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.service-card h3 { font-size: 1rem; }
+.service-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0; }
+
+/* Founder */
+.founder-section {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.founder-info { flex: 1; }
+
+.founder-info .credential {
+  display: inline-block;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin: 0.2rem 0.3rem 0.2rem 0;
+}
+
+.founder-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat { text-align: center; }
+.stat .stat-number { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.stat .stat-label { font-size: 0.78rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-block h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+
+.contact-block a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contact-block a:hover { text-decoration: underline; }
+
+.contact-block p { font-size: 0.9rem; color: var(--text-light); }
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+footer span { color: var(--accent); font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 700px) {
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.3rem; }
+  .hero { padding: 3rem 1.5rem; }
+  section { padding: 3rem 1.5rem; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .founder-section { flex-direction: column; }
+  .founder-stats { flex-wrap: wrap; gap: 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  nav .nav-links { gap: 1rem; }
+  nav .nav-links a { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 0.7rem 1rem; }
+  nav .logo { font-size: 1.1rem; }
+  nav .nav-links { gap: 0.7rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Scope<span>AI</span></a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Intelligence systems for media production risk analysis</h1>
+    <p class="subtitle">ScopeAI is building hardware-integrated AI architecture for risk analysis, project scope intelligence, and logistics forecasting across global media production — from feature films to OTT, documentaries, and corporate content.</p>
+    <span class="status-badge">MSME Registered &middot; Concept Stage &middot; Seeking Pilot Partners</span>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="container">
+    <h2>The problem we're solving</h2>
+    <p>Global film, OTT, and television productions face massive financial losses due to decisions made on intuition rather than intelligence. Budgets escalate without early warning. Logistics fail due to poor forecasting. Creative ambition conflicts with physical feasibility. Safety and compliance are addressed reactively, never proactively.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h3>No unified risk system</h3>
+        <p>There is no standardised, intelligent, real-time risk analysis system dedicated exclusively to media production anywhere in the world.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Informal decision-making</h3>
+        <p>Production risks are assessed through experience, intuition, limited spreadsheets, and outdated market reports — not structured intelligence.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Financial exposure</h3>
+        <p>Hundreds of completed films remain unreleased due to creative-commercial misalignment that could have been identified at the script stage.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Compliance gaps</h3>
+        <p>Women safety, child welfare, environmental impact, and labour compliance are fragmented across departments with no unified monitoring.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <h2>What we're building</h2>
+    <p class="build-intro">A dedicated hardware system with embedded AI intelligence — acting as a secure, domain-trained decision intelligence terminal for media production risk governance. This is research-grade infrastructure, not a SaaS dashboard.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">R</div>
+        <h3>Risk intelligence</h3>
+        <p>Multi-layered risk analysis across creativity, logistics, finance, scheduling, compliance, and market timing — with five-year historical learning and one-year predictive forecasting.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">S</div>
+        <h3>Scope validation</h3>
+        <p>Project scope intelligence that cross-verifies creative ambition against budget reality, logistics constraints, and market conditions before capital is committed.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">M</div>
+        <h3>Mitigation architecture</h3>
+        <p>Automated mitigation pathway simulation covering creative-logistics conflicts, insurance exposure, environmental impact, and workforce safety indicators.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem;" class="muted"><strong>Research domains:</strong> Feature films, OTT series, TV production, documentaries, corporate films, advertising, institutional media, event documentation, and all sectors where audiovisual creation intersects with planning, budgeting, and execution.</p>
+
+    <p class="muted"><strong>Societal integration:</strong> Women empowerment and safety scoring, child welfare compliance, labour safety monitoring, environmental footprint forecasting, and constitutional compliance — built in as risk sub-modules, not add-ons.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Available services</h2>
+    <p>While the hardware research advances, ScopeAI offers consulting and AI-assisted services drawing on the founder's 27+ years of cross-domain expertise in media production, technology, and systems architecture.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Production risk intelligence reports</h3>
+        <p>Structured risk analysis for film and media productions — covering creative risk, budget deviation, logistics, scheduling, market timing, and compliance. Delivered as a confidential assessment before capital is committed.</p>
+      </div>
+      <div class="service-card">
+        <h3>AI workflow automation</h3>
+        <p>Custom AI-powered automation pipelines for media production workflows — transcription, translation, content processing, and production intelligence systems.</p>
+      </div>
+      <div class="service-card">
+        <h3>Translation and localisation</h3>
+        <p>English-Tamil and multilingual translation services for media content, with domain expertise in cinematic dialogue, technical documentation, and institutional communication.</p>
+      </div>
+      <div class="service-card">
+        <h3>Production systems consulting</h3>
+        <p>Advisory on production planning, workflow design, and systems architecture for film, OTT, and corporate media operations — informed by 300+ production experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="container">
+    <h2>Founder</h2>
+    <div class="founder-section">
+      <div class="founder-info">
+        <h3>K. Thangamani Prabu</h3>
+        <p style="color: var(--accent); font-weight: 500; margin-bottom: 0.8rem;">AI Architect &middot; Media Production Systems</p>
+        <p>A polymath practitioner with 27+ years spanning broadcast television direction, feature film production, OTT content, voice engineering, AI automation, mechanical engineering, and professional photography. Trained at the National School of Drama. Builder of production systems under constraint — from AutoLISP in 1995 without internet access to AI-integrated media intelligence in 2026.</p>
+
+        <p>Core thesis: <em>Film-making failure is a systems failure, not a creativity failure.</em></p>
+
+        <div style="margin-top: 1rem;">
+          <span class="credential">Broadcast TV Direction</span>
+          <span class="credential">Feature Film Production</span>
+          <span class="credential">NSD Acting Training</span>
+          <span class="credential">AI Systems Architecture</span>
+          <span class="credential">Mechanical Engineering</span>
+          <span class="credential">Professional Photography</span>
+          <span class="credential">Voice Engineering</span>
+          <span class="credential">OTT Content</span>
+        </div>
+
+        <div class="founder-stats">
+          <div class="stat">
+            <div class="stat-number">27+</div>
+            <div class="stat-label">Years experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">300+</div>
+            <div class="stat-label">Productions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Domains</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Get in touch</h2>
+    <p>ScopeAI is seeking institutional collaboration, pilot partners, and technical review for its research architecture. We welcome conversations with incubators, research institutions, production councils, and industry professionals.</p>
+
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>General enquiries</h3>
+        <a href="mailto:info@scopeai.in">info@scopeai.in</a>
+      </div>
+      <div class="contact-block">
+        <h3>Consulting and services</h3>
+        <a href="mailto:info@scopeai.in">info@scopeai.in</a>
+      </div>
+      <div class="contact-block">
+        <h3>Location</h3>
+        <p>Chennai, Tamil Nadu, India</p>
+      </div>
+      <div class="contact-block">
+        <h3>Registration</h3>
+        <p>MSME Udyam Registered<br>NIC 6201 — IT Consultancy & Services</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 <span>ScopeAI</span> &middot; Chennai, India &middot; AI-integrated intelligence for media production</p>
+</footer>
+
+</body>
+</html>
