@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>ScopeAI — Media-Infrastructure Deep Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="ScopeAI is building edge-ready AI decision intelligence for media-intensive execution—risk governance, scope intelligence, and digital-twin validation across the global audiovisual supply chain." />
   <link rel="canonical" href="https://www.scopeai.in/" />
 
@@ -23,16 +26,22 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root{
-      --primary:#1a2332;
-      --accent:#2c6faa;
+
+  --brand-primary: #000033; /* Midnight Navy */
+  --brand-accent:  #FF3B30; /* Signal Red/Orange */
+
+      --primary:var(--brand-primary);
+      --accent:var(--brand-accent);
       --accent-light:#e8f0fa;
-      --text:#2d3748;
+      --text:#0b1020;
       --text-light:#64748b;
       --bg:#ffffff;
       --bg-alt:#f7f8fa;
       --border:#e2e8f0;
       --max-width: 900px;
-    }
+    
+  --muted: #3a4156;
+}
 
     body{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -250,13 +259,42 @@
       .contact-grid{ grid-template-columns: 1fr; }
       nav{ padding: 0.85rem 1rem; }
     }
-  </style>
+  
+  @media (prefers-color-scheme: dark) {
+    :root{
+      --bg: #0b0f1a;
+      --text: #e9eefc;
+      --muted: #a9b3cf;
+      --primary: #ffffff;
+      --accent: var(--brand-accent);
+      --card: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.12);
+    }
+    nav{ background: rgba(11,15,26,0.82); }
+  }
+
+
+  /* Wordmark */
+  .logo{
+    font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.22rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  }
+  .logo-scope{ color: var(--primary); }
+  .logo-ai{ color: var(--accent); }
+
+</style>
 </head>
 
 <body>
   <nav>
     <div class="nav-inner">
-      <a class="logo" href="#top">Scope<span>AI</span></a>
+      <a class="logo" href="#top"><span class="logo-scope">S&nbsp;C&nbsp;O&nbsp;P&nbsp;E</span><span class="logo-ai">&nbsp;A&nbsp;I</span></a>
       <ul>
         <li><a class="navlink" href="#research">Research</a></li>
         <li><a class="navlink" href="#architecture">Architecture</a></li>
