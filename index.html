@@ -3,432 +3,311 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>ScopeAI — Media-Infrastructure Deep Tech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="ScopeAI is building edge-ready AI decision intelligence for media-intensive execution—risk governance, scope intelligence, and digital-twin validation across the global audiovisual supply chain." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="ScopeAI is building the AIP OS—a multidimensional architecture for media-intensive execution risk governance and digital-twin validation." />
   <link rel="canonical" href="https://www.scopeai.in/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ScopeAI — Media-Infrastructure Deep Tech" />
-  <meta property="og:description" content="Edge-ready AI decision intelligence for media-intensive execution—risk governance, scope intelligence, and digital-twin validation." />
-  <meta property="og:url" content="https://www.scopeai.in/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="ScopeAI — Media-Infrastructure Deep Tech" />
-  <meta name="twitter:description" content="Edge-ready AI decision intelligence for media-intensive execution—risk governance, scope intelligence, and digital-twin validation." />
-
+  
   <style>
+    :root {
+      --navy: #000033;
+      --signal-red: #FF3B30;
+      --text: #0B1020;
+      --text-sec: #475569;
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --border: #E2E8F0;
+      --mw: 900px;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    :root{
-
-  --brand-primary: #000033; /* Midnight Navy */
-  --brand-accent:  #FF3B30; /* Signal Red/Orange */
-
-      --primary:var(--brand-primary);
-      --accent:var(--brand-accent);
-      --accent-light:#e8f0fa;
-      --text:#0b1020;
-      --text-light:#64748b;
-      --bg:#ffffff;
-      --bg-alt:#f7f8fa;
-      --border:#e2e8f0;
-      --max-width: 900px;
-    
-  --muted: #3a4156;
-}
-
-    body{
-      color-scheme: light;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    body {
+      font-family: 'Inter', sans-serif;
       color: var(--text);
       line-height: 1.7;
-      font-size: 16px;
       background: var(--bg);
+      -webkit-font-smoothing: antialiased;
     }
 
-    nav{
+    nav {
       position: sticky;
       top: 0;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      z-index: 50;
-      padding: 0.9rem 2rem;
+      z-index: 100;
+      padding: 0 2rem;
     }
 
-    nav .nav-inner{
-      max-width: var(--max-width);
+    .nav-inner {
+      max-width: var(--mw);
       margin: 0 auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
     }
 
-    nav .logo{
-      font-size:1.25rem;
-      font-weight: 750;
-      color: var(--primary);
-      text-decoration:none;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-    }
-    nav ul{
-      display:flex;
-      gap: 1.4rem;
-      list-style:none;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.2em;
+      font-size: 1.1rem;
     }
 
-    nav a.navlink{
-      text-decoration:none;
-      color: var(--text-light);
-      font-size:0.9rem;
-      font-weight: 550;
+    .logo-scope { color: var(--navy); }
+    .logo-ai { color: var(--signal-red); }
+
+    nav ul { display: flex; gap: 1.8rem; list-style: none; }
+    nav a.navlink {
+      text-decoration: none;
+      color: var(--text-sec);
+      font-size: 0.85rem;
+      font-weight: 600;
       transition: color 0.2s;
     }
+    nav a.navlink:hover { color: var(--signal-red); }
 
-    nav a.navlink:hover{ color: var(--accent); }
+    section { padding: 5rem 2rem; }
+    .container { max-width: var(--mw); margin: 0 auto; }
 
-    section{ padding: 4rem 2rem; }
-    section:nth-child(even){ background: var(--bg-alt); }
-
-    .container{ max-width: var(--max-width); margin: 0 auto; }
-
-    h1{
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1.25;
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
       letter-spacing: -0.02em;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    h2{
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    h3{
-      font-size: 1.05rem;
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.4rem;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
     }
 
-    p{ margin-bottom: 1rem; }
-    .muted{ color: var(--text-light); font-size: 0.95rem; }
+    h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 0.5rem; }
 
-    /* Hero */
-    .hero{
-      padding: 5rem 2rem 4rem;
-      background: linear-gradient(168deg, #f0f5fa 0%, #ffffff 100%);
+    .hero {
+      padding: 7rem 2rem 5rem;
+      background: linear-gradient(180deg, #F1F5F9 0%, #FFFFFF 100%);
     }
 
-    .subtitle{
-      font-size: 1.12rem;
-      color: var(--text-light);
-      line-height: 1.75;
-      max-width: 760px;
-      margin-bottom: 1.4rem;
+    .hero-label {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--signal-red);
+      margin-bottom: 1rem;
     }
 
-    .status-badge{
-      display:inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 650;
-      padding: 0.42rem 1rem;
-      border-radius: 999px;
-      border: 1px solid #c4d9ef;
-    }
+    .subtitle { font-size: 1.15rem; color: var(--text-sec); max-width: 780px; margin-bottom: 2rem; }
 
-    /* Problem cards */
-    .grid-2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 1.3rem;
-    }
-
-    .card{
-      padding: 1.35rem;
+    .status-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .status-tag {
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      border-left: 3px solid var(--accent);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--navy);
     }
 
-    .card p{ margin: 0; color: var(--text-light); font-size: 0.93rem; }
-
-    /* Pillars */
-    .grid-3{
-      display:grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-    }
-
-    .pillar{
-      padding: 1.35rem;
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .icon{
-      width: 44px;
-      height: 44px;
-      background: var(--accent-light);
-      border-radius: 10px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin: 0 auto 0.9rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-
-    .pillar p{ margin: 0; color: var(--text-light); font-size: 0.9rem; }
-
-    /* Bullets */
-    ul.clean{
-      margin-top: 0.8rem;
-      padding-left: 1.1rem;
-    }
-    ul.clean li{
-      margin: 0.55rem 0;
-      color: var(--text);
-    }
-    ul.clean li span{
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    /* Contact blocks */
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
-      margin-top: 1.1rem;
+      margin-top: 2rem;
     }
 
-    .contact-block{
-      padding: 1.25rem;
+    .usp-card {
+      padding: 1.5rem;
       background: var(--bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-top: 3px solid var(--signal-red);
+      border-radius: 4px;
     }
 
-    .contact-block a{
-      color: var(--accent);
-      text-decoration:none;
-      font-weight: 650;
-    }
-    .contact-block a:hover{ text-decoration: underline; }
-    .contact-block p{ margin: 0; color: var(--text-light); font-size: 0.92rem; }
+    .usp-card h3 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .usp-card p { font-size: 0.9rem; color: var(--text-sec); }
 
-    footer{
-      padding: 2rem;
-      text-align:center;
+    .arch-block {
+      background: var(--bg-alt);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    .arch-item { margin-bottom: 1.5rem; }
+    .arch-item:last-child { margin: 0; }
+    .arch-item strong { color: var(--navy); display: block; margin-bottom: 0.2rem; }
+
+    .founder-box {
+      border-left: 2px solid var(--signal-red);
+      padding-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      padding: 1.5rem;
+      background: var(--bg-alt);
+      border-radius: 4px;
+    }
+
+    .contact-card h3 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-sec); margin-bottom: 0.5rem; }
+    .contact-card a { color: var(--signal-red); text-decoration: none; font-weight: 700; }
+
+    footer {
+      padding: 3rem 2rem;
       border-top: 1px solid var(--border);
-      color: var(--text-light);
-      font-size: 0.82rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-sec);
     }
-    footer span{ color: var(--accent); font-weight: 700; }
 
-    /* Responsive */
-    @media (max-width: 800px){
-      h1{ font-size: 1.85rem; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .grid-2{ grid-template-columns: 1fr; }
-      .contact-grid{ grid-template-columns: 1fr; }
-      nav{ padding: 0.85rem 1rem; }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
     }
-    nav{ background: rgba(11,15,26,0.82); }
-  }
-
-
-  /* Wordmark */
-  .logo{
-    font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.22rem;
-    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
-  }
-  .logo-scope{ color: #000033; }
-  .logo-ai{ color: #FF3B30; }
-
-</style>
+  </style>
 </head>
-
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a class="logo" href="#top"><span class="logo-scope">S&nbsp;C&nbsp;O&nbsp;P&nbsp;E</span><span class="logo-ai">&nbsp;A&nbsp;I</span></a>
-      <ul>
-        <li><a class="navlink" href="#research">Research</a></li>
-        <li><a class="navlink" href="#architecture">Architecture</a></li>
-        <li><a class="navlink" href="#roadmap">Roadmap</a></li>
-        <li><a class="navlink" href="#founder">Founder</a></li>
-        <li><a class="navlink" href="#contact">Contact</a></li>
-      </ul>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-scope">S&#8201;C&#8201;O&#8201;P&#8201;E</span>
+      <span class="logo-ai">A&#8201;I</span>
+    </a>
+    <ul>
+      <li><a class="navlink" href="#usp">Pillars</a></li>
+      <li><a class="navlink" href="#architecture">Architecture</a></li>
+      <li><a class="navlink" href="#founder">Principal</a></li>
+      <li><a class="navlink" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="container">
+    <span class="hero-label">Media-Infrastructure Deep Tech</span>
+    <h1>The Autonomous Operating System for Global Media Infrastructure.</h1>
+    <p class="subtitle">
+      ScopeAI is developing the <strong>AIP OS (Autonomous Integrated Production Operating System)</strong> &mdash; a unified edge-to-cloud architecture designed to govern the high-variance, time-critical execution of media-intensive projects.
+    </p>
+    <div class="status-row">
+      <span class="status-tag">Registered Deep-Tech Entity (India)</span>
+      <span class="status-tag">20-Year Institutional R&amp;D Roadmap</span>
+      <span class="status-tag">Pre-Alpha Validation Phase</span>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <section class="hero" id="top">
-    <div class="container">
-      <h1>Media-Infrastructure Deep Tech for execution risk governance</h1>
-      <p class="subtitle">
-        <strong>ScopeAI</strong> is building edge-ready AI decision intelligence for media-intensive execution—converting creative intent,
-        operational constraints, and delivery obligations into measurable risk signals and mitigation logic.
-        This is not “a filmmaking tool.” It is infrastructure for the <strong>global audiovisual supply chain</strong>,
-        designed for high-variance, time-critical environments where decisions must remain disciplined under uncertainty.
-      </p>
-      <span class="status-badge">Concept stage · Registered entity (India) · Institutional-grade R&amp;D roadmap</span>
-    </div>
-  </section>
-
-  <section id="problem">
-    <div class="container">
-      <h2>Why media projects fail even when creativity is strong</h2>
-      <p>
-        Most failure is not artistic. It is systems failure: feasibility is not stress-tested, risk is detected late,
-        and downstream consequences are not governed across logistics, compliance, and delivery.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>No unified risk surface</h3>
-          <p>Risk is distributed across people, departments, spreadsheets, and intuition—without one coherent decision layer.</p>
-        </div>
-        <div class="card">
-          <h3>Scope expands without consequence logic</h3>
-          <p>Creative change triggers cascading cost and schedule effects—because consequences aren’t quantified early and re-quantified during execution.</p>
-        </div>
-        <div class="card">
-          <h3>Delivery obligations are handled too late</h3>
-          <p>Release/licensing/distribution obligations (deadlines, versions, approvals, usage rights) become “hidden risk” unless treated as first-class modules in the operating logic.</p>
-        </div>
-        <div class="card">
-          <h3>Compliance stays informal</h3>
-          <p>Safety, welfare, and audit readiness require structured tracking and evidence—not last-minute checking.</p>
-        </div>
+<section id="usp" style="background: var(--bg-alt);">
+  <div class="container">
+    <h2>Multidimensional Synergy: The Feedback Loop</h2>
+    <p>ScopeAI creates a real-time intelligence loop between four critical pillars to resolve systemic failures in production pipelines:</p>
+    <div class="grid-4">
+      <div class="usp-card">
+        <h3>Money</h3>
+        <p>Predictive neural models for real-time ROI and capital-exposure governance across the supply chain.</p>
+      </div>
+      <div class="usp-card">
+        <h3>Logistics</h3>
+        <p>Dynamic scheduling logic that accounts for resource constraints and high-variance execution environments.</p>
+      </div>
+      <div class="usp-card">
+        <h3>Creativity</h3>
+        <p>Semantic multimodal models analyzing <strong>contents</strong> for effectiveness, structural rhythm, and intent alignment.</p>
+      </div>
+      <div class="usp-card">
+        <h3>Technology</h3>
+        <p>Edge-AI automation interfacing with execution hardware to ensure technical output remains disciplined.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="research">
-    <div class="container">
-      <h2>What ScopeAI is building</h2>
-      <p>
-        ScopeAI is developing an <strong>Integrated Production Logic (IPL)</strong> approach: a governed intelligence layer that connects
-        money, logistics, creativity, and technology into one operational system—so complex media work becomes predictable, defendable, and measurable.
-      </p>
-
-      <div class="grid-3">
-        <div class="pillar">
-          <div class="icon">1</div>
-          <h3>Supply-chain intelligence for audiovisual assets</h3>
-          <p>A production-grade model that links plans to real constraints—people, locations, time, permissions, vendors, post workflows—without forcing creativity into rigid templates.</p>
-        </div>
-        <div class="pillar">
-          <div class="icon">2</div>
-          <h3>Scope intelligence and feasibility governance</h3>
-          <p>Feasibility checks that keep ambition aligned with constraints—then continuously re-validate as conditions change.</p>
-        </div>
-        <div class="pillar">
-          <div class="icon">3</div>
-          <h3>Edge-to-Cloud execution architecture</h3>
-          <p>Edge handles real-world decision assistance; cloud handles heavy inference, simulation, and model training—built as an explicit edge-to-cloud workflow.</p>
-        </div>
+<section id="architecture">
+  <div class="container">
+    <h2>Integrated Production Logic (IPL)</h2>
+    <p>ScopeAI utilizes IPL to connect financial constraints, logistical realities, and creative intent into a measurable, cyber-physical ecosystem.</p>
+    
+    <div class="arch-block">
+      <div class="arch-item">
+        <strong>Edge-Intelligence Architecture</strong>
+        <p>A distributed computing framework designed to capture execution data and automate technical configurations directly at the source of production.</p>
       </div>
-
-      <p class="muted" style="margin-top: 1.5rem;">
-        Validated first in high-variance production environments, then generalized across entertainment &amp; broadcast, education &amp; institutional learning media,
-        enterprise/industrial communications, government/NGO public communication, and the creator/prosumer economy.
-      </p>
-    </div>
-  </section>
-
-  <section id="architecture">
-    <div class="container">
-      <h2>Architecture posture (how ScopeAI earns credibility)</h2>
-      <p>
-        ScopeAI follows a proof discipline that reduces hype risk: <strong>virtual prototyping</strong> first, then controlled validation,
-        then hardened deployment. The core validation artifact is a <strong>decision-ready digital twin</strong>—a simulation layer that makes
-        consequences visible before costly action is taken.
-      </p>
-
-      <ul class="clean">
-        <li><span>Digital Twin simulation:</span> consequence modeling for time, cost, resource load, compliance exposure, and delivery obligations.</li>
-        <li><span>Inference at scale:</span> LLM/multimodal reasoning converts unstructured inputs into structured decision signals without requiring perfect data hygiene on day one.</li>
-        <li><span>Governance outputs:</span> risk thresholds, mitigation routes, and audit trail—so institutions can evaluate discipline, not slogans.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="roadmap">
-    <div class="container">
-      <h2>What further</h2>
-      <p>
-        ScopeAI is a long-cycle infrastructure build. Near term: architecture and validation. Mid term: expanding modules, datasets,
-        and verification methods. Long term: an edge-ready execution terminal that supports disciplined decisions across the audiovisual supply chain—without compromising confidentiality or operational control.
-      </p>
-    </div>
-  </section>
-
-  <section id="founder">
-    <div class="container">
-      <h2>Founder</h2>
-      <p>
-        ScopeAI is led by founder <strong>Mr Thangamani Prabu</strong>, a systems-first media operator with decades of execution exposure across film, broadcast,
-        OTT, corporate, and institutional formats—spanning <strong>hundreds of cross-format deliverables</strong>. The recurring pattern is consistent:
-        creativity succeeds when risk, logistics, and governance are structured. ScopeAI consolidates that operational grammar into a deep-tech architecture designed to be reviewed,
-        tested, and scaled with institutional discipline.
-      </p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>
-        ScopeAI is structured for engagement with cloud programs, deep-tech incubators, grants, stipends, and sponsors supporting high-compute,
-        high-impact infrastructure work in media-intensive execution environments.
-      </p>
-
-      <div class="contact-grid">
-        <div class="contact-block">
-          <h3>Email</h3>
-          <p><a href="mailto:info@scopeai.in">info@scopeai.in</a></p>
-        </div>
-        <div class="contact-block">
-          <h3>Status</h3>
-          <p>Concept stage · Registered entity (India) · R&D in progress</p>
-        </div>
+      <div class="arch-item">
+        <strong>Cloud-Scale Inference &amp; Simulation</strong>
+        <p>High-compute environments dedicated to heavy-model training, multidimensional risk prediction, and complex logistics simulation.</p>
+      </div>
+      <div class="arch-item">
+        <strong>Decision-Ready Digital Twins</strong>
+        <p>Virtual prototyping that simulates production outcomes and resource loads, enabling validation before physical capital is committed.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 <span>ScopeAI</span> · No cookies · No tracking</p>
-  </footer>
+<section id="founder" style="background: var(--bg-alt);">
+  <div class="container">
+    <h2>Principal Architect</h2>
+    <div class="founder-box">
+      <h3>K. Thangamani Prabu</h3>
+      <p>A systems-first practitioner focused on the architecture of complex media deliverables. Prabu conceptualized the AIP OS as a multidimensional solution to the systemic failures inherent in the global audiovisual supply chain. His mission is to establish a <strong>"Grammar of Execution"</strong> &mdash; a technical backbone that ensures technology serves as the reliable foundation for high-stakes creative vision.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Technical Correspondence</h2>
+    <p>ScopeAI is structured for strategic partnership with infrastructure providers, deep-tech accelerators, and global R&amp;D programs.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Official Inquiries</h3>
+        <a href="mailto:info@scopeai.in">info@scopeai.in</a>
+      </div>
+      <div class="contact-card">
+        <h3>Institutional Status</h3>
+        <p>Registered MSME Entity (India) &middot; NIC 6201</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">
+    <span class="logo-scope">S&#8201;C&#8201;O&#8201;P&#8201;E</span>
+    <span class="logo-ai">A&#8201;I</span>
+  </div>
+  <p style="margin-top: 1rem;">&copy; 2026 ScopeAI &middot; No cookies &middot; No tracking</p>
+</footer>
+
 </body>
 </html>
