@@ -44,6 +44,7 @@
 }
 
     body{
+      color-scheme: light;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
       line-height: 1.7;
@@ -78,9 +79,6 @@
       letter-spacing: -0.02em;
       white-space: nowrap;
     }
-
-    nav .logo span{ color: var(--accent); }
-
     nav ul{
       display:flex;
       gap: 1.4rem;
@@ -259,17 +257,6 @@
       .contact-grid{ grid-template-columns: 1fr; }
       nav{ padding: 0.85rem 1rem; }
     }
-  
-  @media (prefers-color-scheme: dark) {
-    :root{
-      --bg: #0b0f1a;
-      --text: #e9eefc;
-      --muted: #a9b3cf;
-      --primary: #ffffff;
-      --accent: var(--brand-accent);
-      --card: rgba(255,255,255,0.04);
-      --border: rgba(255,255,255,0.12);
-    }
     nav{ background: rgba(11,15,26,0.82); }
   }
 
@@ -285,8 +272,8 @@
     gap: 0.22rem;
     font-size: clamp(0.95rem, 1.4vw, 1.15rem);
   }
-  .logo-scope{ color: var(--primary); }
-  .logo-ai{ color: var(--accent); }
+  .logo-scope{ color: #000033; }
+  .logo-ai{ color: #FF3B30; }
 
 </style>
 </head>
@@ -434,7 +421,7 @@
         </div>
         <div class="contact-block">
           <h3>Status</h3>
-          <p>Concept stage · Registered entity (India) · Architecture ready for technical review</p>
+          <p>Concept stage · Registered entity (India) · R&D in progress</p>
         </div>
       </div>
     </div>
