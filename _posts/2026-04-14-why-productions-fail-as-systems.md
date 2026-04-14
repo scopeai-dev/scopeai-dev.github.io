@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Productions Fail as Systems, Not Just as Projects"
-date: 2026-04-15
+date: 2026-04-14
 ---
 
 For years, one pattern kept repeating across production environments:
